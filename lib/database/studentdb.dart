@@ -66,6 +66,7 @@ void _startBackground(_IsolateStartRequest request) {
   // we're using DriftIsolate.inCurrent here as this method already runs on a
   // background isolate. If we used DriftIsolate.spawn, a third isolate would be
   // started which is not what we want!
+
   final driftIsolate = DriftIsolate.inCurrent(
     () => DatabaseConnection(executor),
   );

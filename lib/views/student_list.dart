@@ -6,27 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:drift/drift.dart' as d;
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
+//   @override
+//   State<HomeScreen> createState() => _HomeScreenState();
+// }
 
-class _HomeScreenState extends State<HomeScreen> {
-  // late MyDatabase myDatabase;
-
-  @override
-  void initState() {
-    // myDatabase = MyDatabase();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    // myDatabase.close();
-    super.dispose();
-  }
+// class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
