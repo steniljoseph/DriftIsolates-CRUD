@@ -29,13 +29,13 @@ class MyDatabase extends _$MyDatabase {
       await (delete(student)..where((tbl) => tbl.id.equals(id))).go();
 }
 
-LazyDatabase _openConnection() {
-  return LazyDatabase(() async {
-    final dbFolder = await getApplicationDocumentsDirectory();
-    final file = File(p.join(dbFolder.path, 'db.sqlite'));
-    return NativeDatabase(file);
-  });
-}
+// LazyDatabase _openConnection() {
+//   return LazyDatabase(() async {
+//     final dbFolder = await getApplicationDocumentsDirectory();
+//     final file = File(p.join(dbFolder.path, 'db.sqlite'));
+//     return NativeDatabase(file);
+//   });
+// }
 
 Future<DriftIsolate> _createDriftIsolate() async {
   // this method is called from the main isolate. Since we can't use

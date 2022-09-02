@@ -22,19 +22,8 @@ DatabaseConnection _backgroundConnection() {
 }
 
 void main() async {
-  // MyDatabase.connect(
-  //   DatabaseConnection.delayed(
-  //     Future.sync(() async {
-  //       final isolate = await DriftIsolate.spawn(_backgroundConnection);
-  //       return isolate.connect();
-  //     }),
-  //   ),
-  // );
   final isolate = await DriftIsolate.spawn(_backgroundConnection);
 
-  // we can now create a database connection that will use the isolate
-  // internally. This is NOT what's returned from _backgroundConnection, drift
-  // uses an internal proxy class for isolate communication.
   final connection = await isolate.connect();
 
   final db = MyDatabase.connect(connection);
